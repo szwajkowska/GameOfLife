@@ -2,7 +2,7 @@ package pl.ania;
 
 public class Cell {
 
-    private boolean alive;
+    private final boolean alive;
 
     public Cell(boolean alive) {
         this.alive = alive;
@@ -12,17 +12,18 @@ public class Cell {
         return alive;
     }
 
-    public void checkNeighbours(int i) {
+    public boolean checkNeighbours(int i) {
         if (alive) {
             if (i < 2 || i > 3) {
-                alive = false;
+                return false;
             }
 
         } else {
             if (i == 3) {
-                alive = true;
+                return true;
             }
         }
 
+        return alive;
     }
 }

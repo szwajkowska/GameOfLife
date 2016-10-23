@@ -20,9 +20,9 @@ public class CellTest {
         //given
         Cell cell = new Cell(true);
         //when
-        cell.checkNeighbours(1);
+
         //then
-        Assert.assertFalse(cell.isAlive());
+        Assert.assertFalse(cell.checkNeighbours(1));
     }
 
     @Test
@@ -50,9 +50,9 @@ public class CellTest {
         //given
         Cell cell = new Cell(true);
         //when
-        cell.checkNeighbours(5);
+
         //then
-        Assert.assertFalse(cell.isAlive());
+        Assert.assertFalse(cell.checkNeighbours(5));
     }
 
     @Test
@@ -60,8 +60,8 @@ public class CellTest {
         //given
         Cell cell = new Cell(false);
         //when
-        cell.checkNeighbours(3);
+
         //then
-        Assert.assertTrue(cell.isAlive());
+        Assert.assertTrue(cell.checkNeighbours(3));
     }
 }
